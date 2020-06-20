@@ -3,27 +3,23 @@
   "cells": [
     {
       "type": "cs",
-      "input": "assist"
+      "input": "importFiles [ \"/content/clouderizer/BankMarketing/code/MOJO_H2O_BankMarketing/bank.csv\" ]"
     },
     {
       "type": "cs",
-      "input": "setupParse source_frames: [ \"bank.csv\"]"
+      "input": "setupParse source_frames: [ \"nfs://content/clouderizer/BankMarketing/code/MOJO_H2O_BankMarketing/bank.csv\" ]"
     },
     {
       "type": "cs",
-      "input": "parseFiles\n  source_frames: [\"bank.csv\"]\n  destination_frame: \"Key_Frame__bank.hex\"\n  parse_type: \"CSV\"\n  separator: 59\n  number_columns: 17\n  single_quotes: false\n  column_names: [\"age\",\"job\",\"marital\",\"education\",\"default\",\"balance\",\"housing\",\"loan\",\"contact\",\"day\",\"month\",\"duration\",\"campaign\",\"pdays\",\"previous\",\"poutcome\",\"y\"]\n  column_types: [\"Numeric\",\"Enum\",\"Enum\",\"Enum\",\"Enum\",\"Numeric\",\"Enum\",\"Enum\",\"Enum\",\"Numeric\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Enum\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 4194304"
+      "input": "parseFiles\n  source_frames: [\"nfs://content/clouderizer/BankMarketing/code/MOJO_H2O_BankMarketing/bank.csv\"]\n  destination_frame: \"bank2.hex\"\n  parse_type: \"CSV\"\n  separator: 59\n  number_columns: 17\n  single_quotes: false\n  column_names: [\"age\",\"job\",\"marital\",\"education\",\"default\",\"balance\",\"housing\",\"loan\",\"contact\",\"day\",\"month\",\"duration\",\"campaign\",\"pdays\",\"previous\",\"poutcome\",\"y\"]\n  column_types: [\"Numeric\",\"Enum\",\"Enum\",\"Enum\",\"Enum\",\"Numeric\",\"Enum\",\"Enum\",\"Enum\",\"Numeric\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Enum\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 57685"
     },
     {
       "type": "cs",
-      "input": "getFrameSummary \"Key_Frame__bank.hex\""
+      "input": "getFrameSummary \"bank2.hex\""
     },
     {
       "type": "cs",
-      "input": "assist buildModel, null, training_frame: \"Key_Frame__bank.hex\""
-    },
-    {
-      "type": "cs",
-      "input": "buildModel 'xgboost', {\"model_id\":\"xgboost-64f5e335-1814-43c2-8765-bf8eb42c2219\",\"training_frame\":\"Key_Frame__bank.hex\",\"nfolds\":0,\"response_column\":\"y\",\"ignored_columns\":[\"duration\"],\"ignore_const_cols\":true,\"seed\":-1,\"ntrees\":50,\"max_depth\":6,\"min_rows\":1,\"min_child_weight\":1,\"learn_rate\":0.3,\"eta\":0.3,\"sample_rate\":1,\"subsample\":1,\"col_sample_rate\":1,\"colsample_bylevel\":1,\"score_each_iteration\":false,\"stopping_rounds\":0,\"stopping_metric\":\"AUTO\",\"stopping_tolerance\":0.001,\"max_runtime_secs\":0,\"distribution\":\"AUTO\",\"categorical_encoding\":\"AUTO\",\"col_sample_rate_per_tree\":1,\"colsample_bytree\":1,\"monotone_constraints\":[],\"score_tree_interval\":0,\"min_split_improvement\":0,\"gamma\":0,\"max_leaves\":0,\"tree_method\":\"auto\",\"grow_policy\":\"depthwise\",\"dmatrix_type\":\"auto\",\"quiet_mode\":true,\"max_abs_leafnode_pred\":0,\"max_delta_step\":0,\"nthread\":-1,\"calibrate_model\":false,\"max_bins\":256,\"min_sum_hessian_in_leaf\":100,\"min_data_in_leaf\":0,\"sample_type\":\"uniform\",\"normalize_type\":\"tree\",\"rate_drop\":0,\"one_drop\":false,\"skip_drop\":0,\"booster\":\"gbtree\",\"reg_lambda\":1,\"reg_alpha\":0,\"backend\":\"auto\",\"gpu_id\":0}"
+      "input": "buildModel 'xgboost', {\"model_id\":\"xgboost-64f5e335-1814-43c2-8765-bf8eb42c2219\",\"training_frame\":\"bank2.hex\",\"nfolds\":0,\"response_column\":\"y\",\"ignored_columns\":[\"duration\"],\"ignore_const_cols\":true,\"seed\":-1,\"ntrees\":50,\"max_depth\":6,\"min_rows\":1,\"min_child_weight\":1,\"learn_rate\":0.3,\"eta\":0.3,\"sample_rate\":1,\"subsample\":1,\"col_sample_rate\":1,\"colsample_bylevel\":1,\"score_each_iteration\":false,\"stopping_rounds\":0,\"stopping_metric\":\"AUTO\",\"stopping_tolerance\":0.001,\"max_runtime_secs\":0,\"distribution\":\"AUTO\",\"categorical_encoding\":\"AUTO\",\"col_sample_rate_per_tree\":1,\"colsample_bytree\":1,\"monotone_constraints\":[],\"score_tree_interval\":0,\"min_split_improvement\":0,\"gamma\":0,\"max_leaves\":0,\"tree_method\":\"auto\",\"grow_policy\":\"depthwise\",\"dmatrix_type\":\"auto\",\"quiet_mode\":true,\"max_abs_leafnode_pred\":0,\"max_delta_step\":0,\"nthread\":-1,\"calibrate_model\":false,\"max_bins\":256,\"min_sum_hessian_in_leaf\":100,\"min_data_in_leaf\":0,\"sample_type\":\"uniform\",\"normalize_type\":\"tree\",\"rate_drop\":0,\"one_drop\":false,\"skip_drop\":0,\"booster\":\"gbtree\",\"reg_lambda\":1,\"reg_alpha\":0,\"backend\":\"auto\",\"gpu_id\":0}"
     },
     {
       "type": "cs",
