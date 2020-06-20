@@ -1,4 +1,4 @@
-This is an attempt to solve Kaggle's [Bank Marketing UCI](https://www.kaggle.com/c/bank-marketing-uci) competition using H2O.ai. Final model can be tested from below showcase URL
+This is an attempt to solve Kaggle's [Bank Marketing UCI](https://www.kaggle.com/c/bank-marketing-uci) competition using H2O.ai. We use XGBoost recipe with default options in H2O.ai Flow UI. Output performance can be greatly improved by careful selection of features. Intention of this example is to demonstrate the end to end workflow of building the model using H2O.ai and deploying it. Final model can be tested from below demo showcase URL
 
 **Showcase URL :** https://showcase.clouderizer.com/userserving/59619-81909d22-ebe0-442a-a1cb-986bd06b9726-SH/
 
