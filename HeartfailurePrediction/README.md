@@ -11,7 +11,7 @@ Heart failure prediction dataset available from [here](https://www.kaggle.com/an
 
 #### heartfailureprediction.ipynb
 
-This is the notebook that loads above dataset, analysis it and builds models using Random Forest, LGBM, SVM, Decision Tree and Gradient Boosting classifiers.
+This is the notebook that loads above dataset, analyses it and builds models using Random Forest, LGBM, SVM, Decision Tree and Gradient Boosting classifiers.
 
 #### heartfailureprediction.pkl
 
