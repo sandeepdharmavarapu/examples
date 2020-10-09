@@ -36,3 +36,6 @@ Once deployed, you can get the model server URL. This URL can be used to call RE
 
 The best part is you can view various stats, error metrics for the predictions made by your users on your Analytics dashboard. Also you can download the entire stats data as csv.
 
+You can also retrain your model by setting out your existing training API endpoint. You will have options to automate the deployment with your retrained model once retraining is done or to do it manually with zero downtime. You can also configure to retrain your model when the error metric surpasses the set threshold. 
+
+
