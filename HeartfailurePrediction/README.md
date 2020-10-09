@@ -33,3 +33,6 @@ One of the ways to deploy this model for predictions and scoring is using [Cloud
 * Deploy the project (locally or on cloud)
 
 Once deployed, you can get the model server URL. This URL can be used to call REST endpoints to make predictions. Or just open this URL in a browser to access auto generated Scoring UI.
+
+The best part is you can view various stats, error metrics for the predictions made by your users on your Analytics dashboard. Also you can download the entire stats data as csv.
+
