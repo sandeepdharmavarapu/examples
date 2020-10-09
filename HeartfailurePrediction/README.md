@@ -3,11 +3,9 @@ This is a demonstration of the end to end workflow of building the model and dep
 
 **Showcase URL :** https://showcase.clouderizer.com/userserving/63749-a5e5497d-5fe7-4a37-b644-ef7ee877ee73-SH
 
-### File Details
-
-#### heart_failure_clinical_records_dataset.csv
-
 Heart failure prediction dataset available from [here](https://www.kaggle.com/andrewmvd/heart-failure-clinical-data)
+
+### File Details
 
 #### heartfailureprediction.ipynb
 
@@ -31,7 +29,7 @@ Random Forest model stored in pickle. This model can be used as it is for making
 One of the ways to deploy this model for predictions and scoring is using [Clouderizer Showcase](https://clouderizer.com). It allows us to deploy the ML model in a containerized environment, setting up a RESTful server and a modern web application for scoring, without needing to write a single line of code. We can deploy this locally (any Mac or Ubuntu) or on Cloud (AWS or GCP).
 * Login to [Clouderizer](https://showcase.clouderizer.com)
 * Go to Showcase tab and create a new project
-* Select Python Pickle as project type and drag and drop the pickle file from this repositary.
+* Select Python Pickle as project type and drag and drop the pickle file from this repository.
 * Deploy the project (locally or on cloud)
 
 Once deployed, you can get the model server URL. This URL can be used to call REST endpoints to make predictions. Or just open this URL in a browser to access auto generated Scoring UI.
