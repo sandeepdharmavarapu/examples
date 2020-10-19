@@ -1,4 +1,4 @@
-# What is this repositary
+# What is this repository
 This is a repositary of examples for Clouderizer Platform. Each example tries to solve some common problem related to Machine Learning / Deep Learning. Examples include source codes as well as final model output files. The output models can be deployed as it is with Clouderizer Showcase.
 
 Examples in this repositary are organised into folder. Each folder name is prefixed with 
